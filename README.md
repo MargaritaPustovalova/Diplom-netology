@@ -35,7 +35,7 @@
 
 ### Запуск
 
-1. Запустить базу данных MySQL. Параметры для запуска хранятся в файле [docker-compose.yml](https://github.com/MargaritaPustovalova/Diplom/blob/master/docker-compose.yml). Для запуска необходимо ввести в терминале команду:
+1. Запустить базу данных MySQL. Параметры для запуска хранятся в файле [docker-compose.yml](https://github.com/MargaritaPustovalova/Diplom-netology/blob/master/docker-compose.yml). Для запуска необходимо ввести в терминале команду:
 > docker-compose up
 2. Для запуска приложения ввести в терминале команду
 > java -jar artifacts/aqa-shop.jar -port=8080
