@@ -19,23 +19,23 @@
 
 ## Документация
 
-* [План автоматизации](reports/Plan.md)
-* [Отчёт по итогам тестирования](https://github.com/SashaQA32/Course-work/blob/master/reports/Report.md)
-* [Отчёт по итогам автоматизации](https://github.com/SashaQA32/Course-work/blob/master/reports/Summary.md)
+* [План автоматизации](https://github.com/MargaritaPustovalova/Diplom-netology/blob/master/Reports/Plan.md)
+* [Отчёт по итогам тестирования](https://github.com/MargaritaPustovalova/Diplom-netology/blob/master/Reports/Report.md)
+* [Отчёт по итогам автоматизации](https://github.com/MargaritaPustovalova/Diplom-netology/blob/master/Reports/Summary.md)
 
 ## Запуск приложения
 
 ### Предусловия
 
-1. Требуется изучить пречень используемых инструментов, описаных в [плане автоматизации тестирования](reports/Plan.md). Обеспечить их дальнейшее использование в проекте;
-2. Клонировать [репозиторий](https://github.com/SashaQA32/Course-work) командой
+1. Требуется изучить пречень используемых инструментов, описаных в [плане автоматизации тестирования](https://github.com/MargaritaPustovalova/Diplom-netology/blob/master/Reports/Plan.md). Обеспечить их дальнейшее использование в проекте;
+2. Клонировать [репозиторий](https://github.com/MargaritaPustovalova/Diplom-netology) командой
 > git clone
 3. Запустить Docker Desktop;
 4. Открыть проект в IntelliJ IDEA.
 
 ### Запуск
 
-1. Запустить базу данных MySQL. Параметры для запуска хранятся в файле [docker-compose.yml](https://github.com/SashaQA32/Course-work/blob/master/docker-compose.yml). Для запуска необходимо ввести в терминале команду:
+1. Запустить базу данных MySQL. Параметры для запуска хранятся в файле [docker-compose.yml](https://github.com/MargaritaPustovalova/Diplom/blob/master/docker-compose.yml). Для запуска необходимо ввести в терминале команду:
 > docker-compose up
 2. Для запуска приложения ввести в терминале команду
 > java -jar artifacts/aqa-shop.jar -port=8080
