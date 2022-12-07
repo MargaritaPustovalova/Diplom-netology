@@ -41,10 +41,10 @@
 ### Общие рекомендации
 
 - Изменить статус "Успешная операция" на "Ошибка! Банк отказал в проведении операции." при оплате картой со статусом "Declined";
-- Исправить неверный текст предупреждений об ошибках, в случаях описанных в [Issues](https://github.com/MargaritaPustovalova/Diplome-netology/issues);
-- В поле "Владелец" исправить валидацию согласно заведенным [Issues](https://github.com/MargaritaPustovalova/Diplome-netology/issues);
+- Исправить неверный текст предупреждений об ошибках, в случаях описанных в [Issues](https://github.com/MargaritaPustovalova/Diplom-netology/issues);
+- В поле "Владелец" исправить валидацию согласно заведенным [Issues](https://github.com/MargaritaPustovalova/Diplom-netology/issues);
 - Убрать сообщение об успешной оплате, находящееся под уведомлением об ошибке, при отправке данных с невалидным номером карты и иными валидными данными;
 - Исправить орфографическую ошибку на рекламном изображении сервиса покупки тура.
 
 
-Все подробности об найденных дефектах приложения можно посмотреть в [Issues](https://github.com/MargaritaPustovalova/Diplome-netology/issues).
+Все подробности об найденных дефектах приложения можно посмотреть в [Issues](https://github.com/MargaritaPustovalova/Diplom-netology/issues).
