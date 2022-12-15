@@ -16,9 +16,13 @@ public class SQL {
 
     @SneakyThrows
     public static void cleanTable() {
+        val deleteOrderEntity = "DELETE FROM order_entity";
+        val deleteCreditEntity = "DELETE FROM credit_request_entity";
         val deletePaymentEntity = "DELETE FROM payment_entity";
         val runner = new QueryRunner();
         try (val conn = DriverManager.getConnection(url, user, password)) {
+            runner.update(conn, deleteOrderEntity);
+            runner.update(conn, deleteCreditEntity);
             runner.update(conn, deletePaymentEntity);
         } catch (SQLException sqlException) {
             sqlException.printStackTrace();
@@ -28,11 +32,16 @@ public class SQL {
     @SneakyThrows
     public static String getPaymentStatus() {
         String statusSQL = "SELECT status FROM payment_entity";
-        return getStatus(statusSQL);
+        return request(statusSQL);
+    }
+
+    public static String getCreditStatus() {
+        String statusSQL = "SELECT status FROM credit_request_entity";
+        return request(statusSQL);
     }
 
     @SneakyThrows
-    private static String getStatus(String query) {
+    private static String request(String query) {
         val runner = new QueryRunner();
         try (val conn = DriverManager.getConnection(url, user, password)) {
             String status = runner.query(conn, query, new ScalarHandler<String>());

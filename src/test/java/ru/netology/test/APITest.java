@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
 import ru.netology.data.Data;
 import ru.netology.data.SQL;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static ru.netology.data.API.CreditRequestPageForm;
 import static ru.netology.data.API.PaymentPageForm;
@@ -50,6 +51,7 @@ public class APITest {
         val validApprovedCard = new Data.CardData(getApprovedCardNumber(), getValidMonth(), getValidYear(), getValidName(), getCVC());
         val status = CreditRequestPageForm(validApprovedCard);
         assertTrue(status.contains("APPROVED"));
+        assertEquals("APPROVED", SQL.getCreditStatus());
     }
 
     @Test
@@ -57,5 +59,6 @@ public class APITest {
         val validDeclinedCard = new Data.CardData(getDeclinedCardNumber(), getValidMonth(), getValidYear(), getValidName(), getCVC());
         val status = CreditRequestPageForm(validDeclinedCard);
         assertTrue(status.contains("DECLINED"));
+        assertEquals("APPROVED", SQL.getCreditStatus());
     }
 }
