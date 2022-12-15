@@ -38,12 +38,14 @@
 1. Запустить базу данных MySQL. Параметры для запуска хранятся в файле [docker-compose.yml](https://github.com/MargaritaPustovalova/Diplom-netology/blob/master/docker-compose.yml). Для запуска необходимо ввести в терминале команду:
 > docker-compose up
 2. Для запуска приложения ввести в терминале команду
-> java -jar artifacts/aqa-shop.jar -port=8080
+> MySQL база: java "-Dspring.profiles.active=mysql" -jar artifacts/aqa-shop.jar -port=8080
+> Postgres база: java "-Dspring.profiles.active=postgres" -jar artifacts/aqa-shop.jar -port=8080
 3. Приложение должно запуститься и работать по адресу [http://localhost:8080/](http://localhost:8080/).
 
 ### Запуск тестов
 
 1. В терминале IntelliJ IDEA ввести команду;
+> Поменять проперти на соответсвующую базу (MySQL, POSTGRES)
 > ./gradlew clean test
 2. Подождать пока пройдут все тесты и посмотреть результат.
 
